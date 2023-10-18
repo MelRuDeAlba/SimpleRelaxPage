@@ -563,11 +563,6 @@ video {
   line-height: 1;
 }
 
-.text-pink {
-  --tw-text-opacity: 1;
-  color: rgb(222 179 224 / var(--tw-text-opacity));
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(20 16 16 / var(--tw-text-opacity));
