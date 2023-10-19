@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Relax Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">
-    <link href="./main.css" rel="stylesheet">
-  </head>
-
-  <body>
-    <div class="flex w-full	h-full main-container">
-      <div class="flex justify-center items-center w-full	h-full content">
-        <h1 class="text-black font-justAnotherHand text-9xl">WELCOME</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Relax Page</title>
+  <script src="https://unpkg.com/eva-icons"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">
+  <link href="./main.css" rel="stylesheet">
+</head>
+<body class="main-container w-full h-full">
+  <div class="flex flex-col w-full h-full content">
+    <div class="absolute w-full top-0 p-8 settings-container">
+      <div class="flex justify-end">
+        <div id="settings-form" class="p-12 rounded-xl settings-form bg-black/50">
+          <form>
+            <input type="text" placeholder="Enter something">
+          </form>
+        </div>
+        <i 
+          id="settings-icon"
+          data-eva="settings-2-outline"
+          data-eva-fill="#9BB8ED"
+          data-eva-height="48"
+          data-eva-width="48"
+          class="icon-class transition-opacity duration-500 ease-in-out hover:opacity-100 opacity-60"
+        ></i>
+       
       </div>
     </div>
-  </body>
+    <div class="flex justify-center items-center w-full h-full">
+      <h1 class="text-black font-justAnotherHand text-9xl">WELCOME</h1>
+    </div>
+  </div>
 
+  <!-- Overlay and Settings Form -->
+  <div id="overlay" class="overlay"></div>
+  
+
+  <script>
+    eva.replace();
+  </script>
+</body>
 </html>
