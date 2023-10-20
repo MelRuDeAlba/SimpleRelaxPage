@@ -6,20 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Relax Page</title>
   <script src="https://unpkg.com/eva-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/umbrellajs"></script>
+  <script src="./main.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">
   <link href="./main.css" rel="stylesheet">
 </head>
-<body class="main-container w-full h-full">
+<body id="main-container" class="main-container w-full h-full">
   <div class="flex flex-col w-full h-full content">
     <div class="absolute w-full top-0 p-8 settings-container">
       <div class="flex justify-end">
-        <div id="settings-form" class="p-12 rounded-xl settings-form bg-black/50">
-          <form>
-            <input type="text" placeholder="Enter something">
-          </form>
-        </div>
+       
         <i 
           id="settings-icon"
           data-eva="settings-2-outline"
@@ -32,12 +30,36 @@
       </div>
     </div>
     <div class="flex justify-center items-center w-full h-full">
-      <h1 class="text-black font-justAnotherHand text-9xl">WELCOME</h1>
+      <h1 id="main-title" class="text-black font-justAnotherHand text-9xl">WELCOME</h1>
     </div>
   </div>
 
   <!-- Overlay and Settings Form -->
-  <div id="overlay" class="overlay"></div>
+  <div id="overlay" class="justify-center overlay hidden">
+    <div id="settings-form" class="mt-24 p-6 rounded-xl settings-form bg-black/50">
+      <form class="config p-6 border-dashed border-2 border-blue rounded-xl  h-full">
+        
+        <div class="sm:col-span-3">
+          <label for="title" class="block text-sm font-medium leading-6 text-pink">First name</label>
+          <div class="mt-2">
+            <input type="text" value="WELCOME" name="title" id="title" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+        
+        <div class="sm:col-span-3">
+          <label for="backgound" class="block text-sm font-medium leading-6 text-pink">Backgound</label>
+          <div class="mt-2">
+            <select id="backgound" name="backgound" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+              <option value="skyDay">Sky Day</option>
+              <option value="skyNight">Sky Night</option>
+              <option value="neon">Neon</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="mt-5 rounded-md bg-pink px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+      </form>
+    </div>
+  </div>
   
 
   <script>
